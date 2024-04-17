@@ -1,13 +1,19 @@
-import React from 'react'
+import React from 'react';
+import '../styles/Hero.css';
 
 function Hero() {
   return (
-    <div>
-      <h1>Welcome to the Dentist Website!</h1>
-      <p>This is a website for the Dentist.</p>
-      <p>This website is built using React and CSS.</p>
+    <div className="hero">
+      <div className="hero-content">
+        <h1 className="hero-title">Your Trusted Dentistry Clinic</h1>
+        <p className="hero-description">Providing quality dental care for your smile.</p>
+        <div className="cta-buttons">
+          <button className="cta-btn">Book Appointment</button>
+          <button className="cta-btn">Learn More</button>
+        </div>
+      </div>
     </div>
-  )
+  );
 }
 
-export default Hero
+export default Hero;

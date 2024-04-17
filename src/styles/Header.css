@@ -1,60 +1,185 @@
-/* header.css */
-
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  background-color: #fff;
+  background-color: #ffffff;
+  color: #000000;
+  padding: 15px ;
+  background-image: linear-gradient(144deg,#b1b1b1, #e4e4e4 50%,#ffffff);
+  border-bottom: 1px dotted #b1afaf;
 }
 
 .container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  width: 100%;
-  max-width: 1024px;
-  margin: 0 auto;
+  justify-content: space-between;
 }
 
 .logo {
   font-size: 1.5rem;
-  font-weight: bold;
-  color: #333;
+  text-decoration: none;
+  color: #000;
 }
 
 .nav {
   display: flex;
+  align-items: center;
+}
+
+.nav ul {
   list-style: none;
-  margin: 0;
   padding: 0;
+  margin: 0;
+  display: flex;
 }
 
-.nav.active {
-  /* Styles for the dropdown menu when active */
+.nav ul li {
+  margin-left: 20px;
 }
 
-.nav li {
-  margin-right: 1rem;
+.nav ul li:first-child {
+  margin-left: 0;
 }
 
-.nav a {
+.nav ul li a {
   text-decoration: none;
-  color: #333;
+  color: #000000;
+  font-size: 1.2rem;
 }
 
 .menu-toggle {
-  display: none; /* Hide menu toggle initially for larger screens */
+  display: none;
+}
+.close-menu{display: none;}
+
+.auth-buttons{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.auth-buttons a:first-child{
+align-items: center;
+background-image: linear-gradient(144deg,#aa33ff, #8b7aff 50%,#7bf6ff);
+border: 0;
+border-radius: 8px;
+box-shadow: rgba(189, 137, 248, 0.5) 0 15px 30px -5px;
+box-sizing: border-box;
+color: #FFFFFF;
+font-size: 18px;
+justify-content: center;
+line-height: 1em;
+padding: 8px;
+margin: 5px;
+text-decoration: none;
+cursor: pointer;
+}
+.auth-buttons a:last-child{
+align-items: center;
+background-image: linear-gradient(144deg,#3a0064, #7460f7 50%,#35f2ff);
+border: 0;
+border-radius: 8px;
+box-shadow: rgba(151, 65, 252, 0.5) 0 15px 30px -5px;
+box-sizing: border-box;
+color: #FFFFFF;
+font-size: 18px;
+margin: 5px;
+justify-content: center;
+line-height: 1em;
+padding: 10px;
+text-decoration: none;
+cursor: pointer;
 }
 
-/* Media queries for smaller screens */
+
 
 @media (max-width: 768px) {
   .nav {
-    display: none; /* Hide navigation menu on small screens */
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #ffffff;
+    z-index: 1000;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .nav.active {
+    display: flex;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav ul li {
+    margin: 15px 0;
   }
 
   .menu-toggle {
-    display: block; /* Show menu toggle on small screens */
+    display: block;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #000000;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 1500;
   }
+
+  .close-menu {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 1.9rem;
+    color: #000000;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 1500;
+  }
+  .auth-buttons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+  }
+  .auth-buttons a:first-child{
+  align-items: center;
+  background-image: linear-gradient(144deg,#3a0064, #7460f7 50%,#35f2ff);
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.5) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  font-size: 20px;
+  justify-content: center;
+  line-height: 1em;
+  padding: 18px;
+  margin: 5px;
+  text-decoration: none;
+  cursor: pointer;
+}
+.auth-buttons a:last-child{
+  align-items: center;
+  background-image: linear-gradient(144deg,#3a0064, #7460f7 50%,#35f2ff);
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.5) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  font-size: 20px;
+  margin: 5px;
+  justify-content: center;
+  line-height: 1em;
+  padding: 18px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+  
 }

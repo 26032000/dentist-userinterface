@@ -1,0 +1,44 @@
+.service {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.service-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.service-description {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.service-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.service-list li {
+  margin-bottom: 10px;
+}
+
+.schedule-appointment-btn {
+  background-color: #007bff;
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .service-title {
+    font-size: 1.5rem;
+  }
+
+  .service-description {
+    font-size: 1rem;
+  }
+}

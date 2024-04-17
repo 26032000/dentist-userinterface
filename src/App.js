@@ -15,12 +15,16 @@ function App() {
       <Header />
       <Hero />
       <Services />
+      <Treatment />
+      {/* <Header />
+      <Hero />
+      <Services />
       <Treatment /> 
       <FAQ />
       <Dentist />
       <AboutUs />
       <Contact />
-      <Footer />
+      <Footer /> */}
     </div>
   );
 }

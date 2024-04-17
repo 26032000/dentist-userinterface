@@ -1,0 +1,61 @@
+.hero {
+  background-image: url('/home/barrack/Dev/node/dentist_react/public/images/troom.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #002f96;
+  padding: 100px 0;
+  text-align: center;
+}
+
+
+
+
+@keyframes animate {
+  from { font-size: 1.5rem;color: #01041f; }
+  to { font-size: 1.99rem;color: rgb(2, 30, 109); }  
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+
+.hero-title {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  animation: animate 8s ease-in-out infinite alternate;
+}
+
+.hero-description {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  
+  animation: animate 9s ease-in-out infinite alternate;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.cta-btn {
+  background-color: #007bff;
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+  }
+}
