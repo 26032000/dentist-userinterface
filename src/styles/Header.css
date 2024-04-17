@@ -1,0 +1,60 @@
+/* header.css */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #fff;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.nav {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav.active {
+  /* Styles for the dropdown menu when active */
+}
+
+.nav li {
+  margin-right: 1rem;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #333;
+}
+
+.menu-toggle {
+  display: none; /* Hide menu toggle initially for larger screens */
+}
+
+/* Media queries for smaller screens */
+
+@media (max-width: 768px) {
+  .nav {
+    display: none; /* Hide navigation menu on small screens */
+  }
+
+  .menu-toggle {
+    display: block; /* Show menu toggle on small screens */
+  }
+}
