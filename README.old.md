@@ -1,2 +1,0 @@
-# dentist-frontend
-# dentist-frontend
