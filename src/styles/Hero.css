@@ -10,10 +10,10 @@
 
 
 
-@keyframes animate {
+/* @keyframes animate {
   from { color: #020b5f;letter-spacing: normal; }
   to { color: rgb(0, 48, 179);letter-spacing: 2px; }  
-}
+} */
 
 .hero-content {
   max-width: 800px;
@@ -24,14 +24,13 @@
 .hero-title {
   font-size: 3rem;
   margin-bottom: 20px;
-  animation: animate 8s ease-in-out infinite alternate;
+  
 }
 
 .hero-description {
   font-size: 1.2rem;
   margin-bottom: 30px;
-  
-  animation: animate 9s ease-in-out infinite alternate;
+
 }
 
 .cta-buttons {

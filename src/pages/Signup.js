@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { signUp } from '../services/api_services';
+import { signUp } from '../services/api_register';
 import '../styles/SignUpPage.css';
 
 const passwordStrengthRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^\da-zA-Z])(?=.{8,})$/; // Regular expression for strong passwords

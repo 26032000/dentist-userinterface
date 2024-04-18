@@ -1,6 +1,6 @@
 
-
 const BASE_URL="https://dentist-nfwz.onrender.com";
+
 
 
 
@@ -17,7 +17,7 @@ export async function fetchTreatments() {
     throw error;
   }
 }
-
+// Function to Fetch Dentist data
 export async function fetchDentist() {
   try {
     const response = await fetch(`${BASE_URL}/api/dentists`); 
@@ -30,56 +30,23 @@ export async function fetchDentist() {
     throw error;
   }
 }
-
-
-// function to log in
-
-
-export async function login(formData) {
+export const bookAppointment = async (formData) => {
   try {
-    const response = await fetch('https://dentist-nfwz.onrender.com/auth/login', {
+    const response = await fetch('https://dentist-nfwz.onrender.com/api/appointments', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(formData),
     });
-    
     if (!response.ok) {
-      // Handle non-200 status code, e.g., show error message
-      const errorMessage = await response.text();
-      throw new Error(`Login failed: ${errorMessage}`);
+      throw new Error('Failed to book appointment');
     }
-
-    // If login is successful, return the response
-    return await response.json();
+    const data = await response.json();
+    return data;
   } catch (error) {
-    console.error('Login error:', error.message);
+    console.error('Book appointment error:', error);
     throw error;
   }
-}
+};
 
-// register
-export async function signUp(formData) {
-  try {
-    const response = await fetch('https://dentist-nfwz.onrender.com/auth/register', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(formData),
-    });
-    
-    if (!response.ok) {
-      // Handle non-200 status code, e.g., show error message
-      const errorMessage = await response.text();
-      throw new Error(`Sign up failed: ${errorMessage}`);
-    }
-
-    // If sign up is successful, return the response
-    return await response.json();
-  } catch (error) {
-    console.error('Sign up error:', error.message);
-    throw error;
-  }
-}

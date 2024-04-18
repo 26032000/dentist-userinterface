@@ -8,9 +8,17 @@ import Dentist from './components/Dentist';
 import AboutUs from './components/AboutUs';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import { jwtDecode } from 'jwt-decode';
 
 
 function App() {
+  const getUserIdFromToken = (token) => {
+    const decodedToken = jwtDecode(token);
+    return decodedToken.id; 
+  };
+  const token = localStorage.getItem('token');
+const userId = getUserIdFromToken(token);
+console.log(userId);
   return (
     <div className="dentist-website">
       <Header />

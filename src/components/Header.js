@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import '../styles/Header.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
+import { useRequireAuth } from '../services/custom_hook';
 
 function Header() {
   const [showMenu, setShowMenu] = useState(false);
@@ -30,9 +31,18 @@ function Header() {
             </li>
           </ul>
           <div className="auth-buttons">
-            <a href="/login">Login</a>
-            <a href="/signup">Sign Up</a>
-          </div>
+      {useRequireAuth ? (
+        <>
+          <a href="/logout">Logout</a>
+          <a href="/profile">Profile</a>
+        </>
+      ) : (
+        <>
+          <a href="/login">Login</a>
+          <a href="/signup">Sign Up</a>
+        </>
+      )}
+    </div>
           <button className="close-menu" onClick={toggleMenu}>
             <FontAwesomeIcon icon={faTimes} />
           </button>
