@@ -11,8 +11,8 @@
 
 
 @keyframes animate {
-  from { font-size: 1.5rem;color: #01041f; }
-  to { font-size: 1.99rem;color: rgb(2, 30, 109); }  
+  from { color: #020b5f;letter-spacing: normal; }
+  to { color: rgb(0, 48, 179);letter-spacing: 2px; }  
 }
 
 .hero-content {

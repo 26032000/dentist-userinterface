@@ -9,6 +9,7 @@ import AboutUs from './components/AboutUs';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
+
 function App() {
   return (
     <div className="dentist-website">
@@ -16,15 +17,11 @@ function App() {
       <Hero />
       <Services />
       <Treatment />
-      {/* <Header />
-      <Hero />
-      <Services />
-      <Treatment /> 
       <FAQ />
       <Dentist />
       <AboutUs />
       <Contact />
-      <Footer /> */}
+      <Footer /> 
     </div>
   );
 }
